@@ -29,7 +29,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/acr'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendServiceArm: '$(serviceConnectionName)'
     backendAzureRmResourceGroupName: '$(resourceGroup)'
     backendAzureRmStorageAccountName: '$(storageAccount)'
@@ -41,7 +41,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/acr'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     commandOptions: '-out=tfplan'
     # commandOptions: '-detailed-exitcode -out=tfplan'
     environmentServiceNameAzureRM: '$(serviceConnectionName)'
@@ -53,6 +53,6 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/acr'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     commandOptions: 'tfplan'
     environmentServiceNameAzureRM: '$(serviceConnectionName)'
