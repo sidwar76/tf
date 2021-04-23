@@ -1,7 +1,4 @@
 
-variable "prefix" {
-  default = "tfvmex"
-}
 
 resource "azurerm_virtual_network" "example" {
   name                = "${var.prefix}-network"
