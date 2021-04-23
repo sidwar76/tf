@@ -1,5 +1,5 @@
 locals {
-  acr_name = "${var.name}-acr"
+  acr_name = "${var.name}acr"
 }
 
 resource "azurerm_container_registry" "default" {
