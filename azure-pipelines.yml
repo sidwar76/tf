@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- main
  
 pool:
   vmImage: 'ubuntu-latest'
@@ -45,13 +45,15 @@ steps:
     commandOptions: '-out=tfplan'
     # commandOptions: '-detailed-exitcode -out=tfplan'
     environmentServiceNameAzureRM: '$(serviceConnectionName)'
+
+
  
 - task: TerraformTaskV1@0
   displayName: terraform apply tfplan
-  condition: eq(variables.anyTfChanges, true)
+  #condition: eq(variables.anyTfChanges, true)
   inputs:
-   provider: 'azurerm'
-   command: 'apply'
-   workingDirectory: '$(System.DefaultWorkingDirectory)'
-   commandOptions: 'tfplan'
-   environmentServiceNameAzureRM: '$(serviceConnectionName)'
+    provider: 'azurerm'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    commandOptions: 'tfplan'
+    environmentServiceNameAzureRM: '$(serviceConnectionName)'
