@@ -35,6 +35,8 @@ steps:
     backendAzureRmStorageAccountName: '$(storageAccount)'
     backendAzureRmContainerName: '$(container)'
     backendAzureRmKey: '$(tfstateFile)'
+  
+
 
 - task: PowerShell@2
   inputs:
