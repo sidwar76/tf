@@ -40,7 +40,7 @@ steps:
   inputs:
     azureSubscription: 'anuj'
     ScriptType: 'InlineScript'
-    Inline: 'terraform import azurerm_resource_group.siddharth_rg /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/lsiddharth_rg'
+    Inline: 'terraform import azurerm_resource_group.siddharth_rg /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/siddharth_rg'
 - task: TerraformTaskV1@0
   displayName: terraform plan -out=tfplan
   inputs:
