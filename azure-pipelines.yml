@@ -10,9 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
  
 variables:
-  serviceConnectionName: sid
+  serviceConnectionName: anuj
   resourceGroup: siddharth_rg
-  storageAccount: sidwar 
+  storageAccount: sidwar1 
   container: sid
   tfstateFile: terraform.tfstate
   anyTfChanges: false
