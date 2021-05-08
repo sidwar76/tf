@@ -1,6 +1,3 @@
-provider "azurerm" {
-    features {}
-}
 # This will be specific to your own Terraform State in Azure storage
 terraform {
   backend "azurerm" {
