@@ -1,1 +1,0 @@
-az login --service-principal --username 811398c3-7846-4b90-84b9-2c4585a28aaa --password  3d8YqB.G3.Q~eCfhLcx.nZXr_79m384st. --tenant e4e34038-ea1f-4882-b6e8-ccd776459ca0
