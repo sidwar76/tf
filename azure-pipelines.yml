@@ -36,6 +36,10 @@ steps:
     backendAzureRmContainerName: '$(container)'
     backendAzureRmKey: '$(tfstateFile)'
 
+- task: CmdLine@2
+  inputs:
+    script: 'terraform import azurerm_resource_group.siddharth_rg /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/siddharth_rg'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
 # - task: AzureCLI@2
 #   inputs:
 #     azureSubscription: 'terraform-sp'
