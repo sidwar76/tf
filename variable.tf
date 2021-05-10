@@ -31,3 +31,8 @@ variable "plan_sku" {
 variable "prefix" {
   default = "tfvmex"
 }
+variable "location" {
+  type        = "string"
+  description = "Location of the azure resource group."
+  default     = "East US"
+}
