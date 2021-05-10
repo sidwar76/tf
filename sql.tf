@@ -1,8 +1,3 @@
-resource "azurerm_resource_group" "siddharth_rg" {
-  name     = "siddharth_rg-resources"
-  location = "West Europe"
-}
-
 resource "azurerm_sql_server" "siddharth_rg" {
   name                         = "mysiddharth_rgsqlserver"
   resource_group_name          = azurerm_resource_group.siddharth_rg.name
