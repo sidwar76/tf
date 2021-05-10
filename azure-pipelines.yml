@@ -36,14 +36,14 @@ steps:
     backendAzureRmContainerName: '$(container)'
     backendAzureRmKey: '$(tfstateFile)'
 
-- task: PowerShell@2
+- task: AzureCLI@2
   inputs:
-    targetType: 'inline'
-    script: |
-      az login --service-principal --username 811398c3-7846-4b90-84b9-2c4585a28aaa --password 3d8YqB.G3.Q~eCfhLcx.nZXr_79m384st. --tenant e4e34038-ea1f-4882-b6e8-ccd776459ca0
-            
+    azureSubscription: 'terraform-sp'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      echo"-------------------------------"
       terraform import azurerm_resource_group.siddharth_rg /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/siddharth_rg
-
 - task: TerraformTaskV1@0
   displayName: terraform plan -out=tfplan
   inputs:
