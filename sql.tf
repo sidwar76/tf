@@ -1,23 +1,23 @@
 
-resource "azurerm_storage_account" "example" {
+resource "azurerm_storage_account" "siddharth_rg" {
   name                     = "${var.name}sstorageacc"
-  resource_group_name      = azurerm_resource_group.example.name
-  location                 = azurerm_resource_group.example.location
+  resource_group_name      = azurerm_resource_group.siddharth_rg.name
+  location                 = azurerm_resource_group.siddharth_rg.location
   account_tier             = "${var.plan_tier}"
   account_replication_type = "LRS"
 }
 
-resource "azurerm_sql_server" "example" {
+resource "azurerm_sql_server" "siddharth_rg" {
   name                         = "${var.name}-mysqlserver"
-  resource_group_name          = azurerm_resource_group.example.name
-  location                     = azurerm_resource_group.example.location
+  resource_group_name          = azurerm_resource_group.siddharth_rg.name
+  location                     = azurerm_resource_group.siddharth_rg.location
   version                      = "12.0"
   administrator_login          = "${var.loginid}"
   administrator_login_password = "${var.password}"
 
   extended_auditing_policy {
-    storage_endpoint                        = azurerm_storage_account.example.primary_blob_endpoint
-    storage_account_access_key              = azurerm_storage_account.example.primary_access_key
+    storage_endpoint                        = azurerm_storage_account.siddharth_rg.primary_blob_endpoint
+    storage_account_access_key              = azurerm_storage_account.siddharth_rg.primary_access_key
     storage_account_access_key_is_secondary = true
     retention_in_days                       = 6
   }
