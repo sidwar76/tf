@@ -35,17 +35,7 @@ steps:
     backendAzureRmStorageAccountName: '$(storageAccount)'
     backendAzureRmContainerName: '$(container)'
     backendAzureRmKey: '$(tfstateFile)'
-  
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'anuj'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'az login --service-principal -u 9bd6e0d9-4357-4104-9b85-b3ccaaf30b5e -p u]S=pi8GQb:adA8OcDIZ6Q.N6/GZBeVG --tenant e4e34038-ea1f-4882-b6e8-ccd776459ca0'
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'az login --service-principal -u 9bd6e0d9-4357-4104-9b85-b3ccaaf30b5e -p u]S=pi8GQb:adA8OcDIZ6Q.N6/GZBeVG  --tenant e4e34038-ea1f-4882-b6e8-ccd776459ca0'
+
 - task: AzurePowerShell@5
   inputs:
     azureSubscription: 'anuj'
