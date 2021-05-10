@@ -54,7 +54,7 @@ steps:
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'anuj'
-    scriptType: 'ps'
+    scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
       echo"-----------------------"
