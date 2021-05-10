@@ -1,5 +1,5 @@
 resource "azurerm_sql_server" "siddharth_rg" {
-  name                         = "mysiddharth_rgsqlserver"
+  name                         = "mysiddharthrgsqlserver"
   resource_group_name          = azurerm_resource_group.siddharth_rg.name
   location                     = "West US"
   version                      = "12.0"
@@ -12,7 +12,7 @@ resource "azurerm_sql_server" "siddharth_rg" {
 }
 
 resource "azurerm_storage_account" "siddharth_rg" {
-  name                     = "siddharth_rgsa"
+  name                     = "siddharthrgsa"
   resource_group_name      = azurerm_resource_group.siddharth_rg.name
   location                 = azurerm_resource_group.siddharth_rg.location
   account_tier             = "Standard"
@@ -20,7 +20,7 @@ resource "azurerm_storage_account" "siddharth_rg" {
 }
 
 resource "azurerm_sql_database" "siddharth_rg" {
-  name                = "mysiddharth_rgsqldatabase"
+  name                = "mysiddharthrgsqldatabase"
   resource_group_name = azurerm_resource_group.siddharth_rg.name
   location            = "West US"
   server_name         = azurerm_sql_server.siddharth_rg.name
