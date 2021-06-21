@@ -15,7 +15,7 @@ terraform {
   }
 }
 
-resource "azurerm_resource_group" "siddharth_rg" {
+resource "azurerm_resource_group" "siddharth_rg2" {
   name     = "siddharth_rg"
   location = "East US"
 }
