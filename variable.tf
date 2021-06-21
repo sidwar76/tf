@@ -1,7 +1,6 @@
 variable "name" {
   type        = string
   description = "Location of the azure resource group."
-  default     = "exampleitem"
 }
 
 variable "loginid" {
