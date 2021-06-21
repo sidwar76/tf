@@ -15,7 +15,7 @@ provider "azurerm" {
   #}
 #}
 
-resource "azurerm_resource_group" "siddharth_rg2" {
-  name     = "siddharth_rg"
+resource "azurerm_resource_group" "siddharth_rg" {
+  name     = "siddharth_rg2"
   location = "East US"
 }
