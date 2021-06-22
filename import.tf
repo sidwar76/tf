@@ -1,5 +1,5 @@
 provider "azurerm" {
-  export subscription_id = "<subscription_id>"
+  export subscription_id = "subscription_id"
   client_id       = "811398c3-7846-4b90-84b9-2c4585a28aaa" 
   client_secret   = "3d8YqB.G3.Q~eCfhLcx.nZXr_79m384st."
   tenant_id       = "e4e34038-ea1f-4882-b6e8-ccd776459ca0"
